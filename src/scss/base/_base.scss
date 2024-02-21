@@ -1,11 +1,11 @@
 // В font-size можно записать самый частый размер шрифта на сайте, в font-family - самый частое семейство шрифта.
 
 body {
-  font-family: var(--main-font-family);
-  color: var(--main-color);
-  font-size: rem(14);
+  font-family: var(--font-family);
+  color: var(--gray-color);
+  font-size: rem(16);
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.6;
   // color: $mainColor;
   // overflow-wrap: break-word;
   // word-wrap: break-word;
@@ -41,25 +41,59 @@ body._lock {
 }
 
 .button {
+  font-size: rem(16);
+  font-weight: 600;
+  line-height: 1.2;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: rem(8);
   width: fit-content;
-  // color: var(--green);
-  // font-size: rem(12);
-  // min-height: rem(36);
-  // padding: rem(8) rem(24);
-  // border-radius: rem(4);
-  // border: 1px solid var(--green);
+  min-width: rem(200);
+  min-height: rem(61);
+  color: var(--white-color);
+  background: var(--orange-color);
+  text-transform: uppercase;
   text-align: center;
+  border: 1px solid rgba(29, 37, 60, 0.2);
+  border-radius: rem(4);
   user-select: none;
-  transition: all 0.3s ease 0s;
-  // @media (any-hover: hover) and (pointer: fine) {
-  // 	&:hover {
-  // 		color: var(--white);
-  // 		background: var(--green);
-  // 	}
-  // }
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border 0.3s ease;
+  padding: rem(10) rem(39) rem(10) rem(30);
+  @media (any-hover: hover) and (pointer: fine) {
+    &:hover {
+      // background: #d7523e;
+      background: transparent;
+      border: 1px solid var(--orange-color);
+      color: var(--orange-color);
+      & .button-arrow path {
+        fill: var(--orange-color);
+      }
+    }
+  }
+  &_transparent {
+    background: transparent;
+    font-size: rem(14);
+    color: var(----black-color);
+    min-width: rem(161);
+    min-height: rem(44);
+    border: 1px solid rgba(29, 37, 60, 0.2);
+    padding: rem(10) rem(20);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--white-color);
+        background: var(--green-color);
+        border: 1px solid rgba(29, 37, 60, 0.2);
+      }
+    }
+  }
+}
+
+.button-arrow path {
+  transition: fill 0.3s ease;
 }
 
 /*--------- visually-hidden ---------*/
@@ -89,4 +123,19 @@ body._lock {
 
 .none {
   display: none !important;
+}
+
+.logo {
+  // .logo__img
+
+  &__img {
+    // width: rem(95);
+    width: proadrem(55, 95, $minWidthRemWithout, $maxWidthRemWithout);
+    transition: opacity 0.3s ease;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
 }

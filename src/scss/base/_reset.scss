@@ -10,6 +10,10 @@
   box-sizing: border-box;
 }
 
+a {
+  color: inherit;
+}
+
 a,
 a:visited,
 a:hover {
@@ -33,7 +37,7 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  scrollbar-gutter: stable;
+  // scrollbar-gutter: stable;
 }
 
 html {

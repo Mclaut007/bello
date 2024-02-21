@@ -1,7 +1,209 @@
-// .header {
-//   position: absolute;
-//   width: 100%;
-//   top: 0;
-//   left: 0;
-//   z-index: 50;
-// }
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  min-height: rem(80);
+  box-shadow: 0 0 rem(8) 0 rgba(0, 0, 0, 0.1);
+  background: var(--white-color);
+  color: var(--black-color);
+  overflow: hidden;
+  // .header__container
+
+  &__container {
+    max-width: rem(1350);
+    padding: rem(30) rem(15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(30);
+    @media (max-width: $mobile) {
+      column-gap: rem(25);
+    }
+  }
+
+  // .header__logo
+
+  &__logo {
+    // margin-right: rem(35);
+    margin-right: rem(5);
+    flex-shrink: 0;
+    @media (max-width: $mobile) {
+      margin-right: auto;
+    }
+  }
+
+  // .header__menu
+
+  &__menu {
+    margin-right: auto;
+    overflow: auto;
+    @media (max-width: $mobile) {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: -100%;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // background: var(--white-color);
+      background: rgba(0, 0, 0, 0.2);
+      transition: right 0.3s ease;
+      &._menu-open {
+        right: 0;
+      }
+    }
+  }
+
+  // .header__log-in
+
+  &__log-in {
+    @media (min-width: $tablet) {
+      // margin-right: rem(39);
+      margin-right: rem(9);
+    }
+    flex-shrink: 0;
+    // line-height: 1.2;
+    text-decoration-line: underline;
+    text-decoration-color: rgba(0, 113, 136, 0);
+    transition:
+      color 0.3s ease,
+      text-decoration-color 0.3s ease;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--green-color);
+        text-decoration-line: underline;
+        text-decoration-color: rgba(0, 113, 136, 1);
+      }
+    }
+  }
+
+  // .header__button
+
+  &__button {
+    @media (max-width: $mobileSmall) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  // .header__menu-icon
+
+  &__menu-icon {
+    // margin-left: rem(15);
+  }
+}
+
+.menu {
+  // .menu__list
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: rem(35);
+    row-gap: rem(10);
+    flex-wrap: wrap;
+    @media (max-width: $mobile) {
+      width: rem(300);
+      max-width: 100%;
+      min-height: 100%;
+      display: flex;
+      // justify-content: center;
+      align-items: flex-start;
+      background: var(--white-color);
+      margin-left: auto;
+      box-shadow: 0 0 rem(5) rgba(0, 0, 0, 0.3);
+      flex-direction: column;
+      // padding: rem(100) rem(55) rem(20) rem(20);
+      padding: rem(100) rem(20) rem(20) rem(20);
+      row-gap: rem(20);
+    }
+  }
+
+  // .menu__li
+
+  &__item {
+  }
+
+  // .menu__link
+
+  &__link {
+    display: inline-block;
+    position: relative;
+    &::after {
+      content: "";
+      width: 0;
+      height: rem(1);
+      background: var(--green-color);
+      background: transparent;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      transition:
+        width 0.3s ease,
+        background-color 0.3s ease;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: #007188;
+        &::after {
+          background: var(--green-color);
+          width: 100%;
+        }
+      }
+    }
+    @media (max-width: $mobile) {
+      font-size: rem(18);
+    }
+  }
+}
+
+.menu-icon {
+  background-color: transparent;
+  display: none;
+  flex-shrink: 0;
+  @media (max-width: $mobile) {
+    display: block;
+    position: relative;
+    width: rem(30);
+    height: rem(18);
+    z-index: 5;
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      left: 0;
+      width: 100%;
+      height: rem(2);
+      background-color: #000;
+      position: absolute;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &._menu-open {
+      span {
+        transform: scale(0);
+      }
+      &::before {
+        transform: translateY(-50%) rotate(-45deg);
+        top: 50%;
+      }
+      &::after {
+        transform: translateY(-50%) rotate(45deg);
+        top: 50%;
+      }
+    }
+  }
+}
