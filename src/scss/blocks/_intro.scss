@@ -67,7 +67,7 @@
     position: absolute;
     // top: 0;
     // bottom: rem(175);
-    bottom: proadrem(20, 175, $mobileSmallRemWithout, $maxWidthRemWithout);
+    bottom: proadrem(25, 175, $mobileSmallRemWithout, $maxWidthRemWithout);
     right: rem(13);
     width: 70%;
     @media (max-width: $mobileMiddle) {

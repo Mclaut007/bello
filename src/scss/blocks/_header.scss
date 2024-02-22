@@ -21,6 +21,11 @@
     @media (max-width: $mobile) {
       column-gap: rem(25);
     }
+    @media (max-width: $mobileSmall) {
+      column-gap: rem(20);
+      padding-left: rem(20);
+      padding-right: rem(20);
+    }
   }
 
   // .header__logo
@@ -29,7 +34,7 @@
     // margin-right: rem(35);
     margin-right: rem(5);
     flex-shrink: 0;
-    @media (max-width: $mobile) {
+    @media (max-width: $mobile) and (min-width: $mobileSmall) {
       margin-right: auto;
     }
   }
@@ -84,8 +89,8 @@
 
   &__button {
     @media (max-width: $mobileSmall) {
+      min-width: auto;
       width: 100%;
-      max-width: 100%;
     }
   }
 

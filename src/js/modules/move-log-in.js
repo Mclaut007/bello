@@ -16,7 +16,6 @@ function moveLogIn() {
       headerButton.insertAdjacentElement("beforebegin", headerLogIn);
       menuListNewItem.remove();
     }
-    console.log(e);
   }
   mediaQuery.addEventListener("change", handleTabletChange);
   handleTabletChange(mediaQuery);
