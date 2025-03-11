@@ -1,0 +1,106 @@
+.learning-center {
+  background: #f9f5f2;
+  // .learning-center__container
+
+  &__container {
+    // padding: rem(148) rem(15) rem(164);
+    padding: proadrem(55, 148, $minWidthRemWithout, $maxWidthRemWithout) rem(15)
+      proadrem(35, 164, $minWidthRemWithout, $maxWidthRemWithout);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(40);
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: rem(50);
+    }
+  }
+
+  // .learning-center__content
+
+  &__content {
+    width: rem(485);
+    max-width: 100%;
+    // flex-shrink: 0;
+  }
+
+  // .learning-center__subtitle
+
+  &__subtitle {
+    // margin-bottom: rem(27);
+    margin-bottom: proadrem(15, 27, $minWidthRemWithout, $maxWidthRemWithout);
+  }
+
+  // .learning-center__heading
+
+  &__heading {
+    // margin-bottom: rem(35);
+    margin-bottom: proadrem(19, 35, $minWidthRemWithout, $maxWidthRemWithout);
+  }
+
+  // .learning-center__paragraph
+
+  &__paragraph {
+    margin-bottom: rem(15);
+  }
+
+  // .learning-center__link
+
+  &__link {
+  }
+
+  // .learning-center__link-img
+
+  &__link-img {
+  }
+
+  // .learning-center__img-wrapper
+
+  &__img-wrapper {
+    width: rem(542);
+    max-width: 100%;
+    position: relative;
+  }
+
+  // .learning-center__img-bg
+
+  &__img-bg {
+    width: 36%;
+    // width: rem(195);
+    position: absolute;
+    top: -7%;
+    left: -8%;
+  }
+
+  // .learning-center__img-main
+
+  &__img-main {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  // .learning-center__img-text
+
+  &__img-text {
+    font-weight: 300;
+    // font-size: rem(22);
+    font-size: proadrem(14, 17, $minWidthRemWithout, $maxWidthRemWithout);
+    line-height: 1.2;
+    color: var(--black-color);
+    padding: rem(11) rem(18);
+    border-radius: rem(5);
+    width: fit-content;
+    // min-height: rem(67);
+    box-shadow: rem(3) rem(4) rem(34) 0 rgba(66, 71, 77, 0.11);
+    background: #fff;
+    position: absolute;
+    bottom: -5%;
+    // left: -11%;
+    right: 8%;
+    z-index: 2;
+    // @media (max-width: $mobile) {
+    //   left: -5%;
+    // }
+  }
+}

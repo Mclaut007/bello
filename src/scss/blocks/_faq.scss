@@ -1,0 +1,112 @@
+.faq {
+  // .faq__container
+
+  &__container {
+    // padding: rem(160) rem(15) rem(132);
+    padding: proadrem(35, 160, $minWidthRemWithout, $maxWidthRemWithout) rem(15)
+      proadrem(25, 132, $minWidthRemWithout, $maxWidthRemWithout);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(250), 1fr));
+    gap: rem(20);
+    @media (max-width: $mobileSmall) {
+      gap: rem(15);
+    }
+  }
+
+  // .faq__item
+
+  &__item {
+    padding: rem(40) rem(22) rem(33);
+    padding: proadrem(20, 40, $minWidthRemWithout, $maxWidthRemWithout)
+      proadrem(15, 22, $minWidthRemWithout, $maxWidthRemWithout)
+      proadrem(20, 33, $minWidthRemWithout, $maxWidthRemWithout);
+    // min-height: rem(323);
+    display: flex;
+    flex-direction: column;
+    &._blue {
+      background: rgba(169, 216, 255, 0.3);
+    }
+    &._beige {
+      background: rgba(255, 174, 104, 0.3);
+    }
+    &._orange-red {
+      background: rgba(250, 82, 64, 0.3);
+    }
+    &._green {
+      background: rgba(18, 111, 133, 0.3);
+    }
+  }
+
+  // .faq__title
+
+  &__title {
+    font-weight: 600;
+    // font-size: rem(34);
+    font-size: proadrem(28, 34, $minWidthRemWithout, $maxWidthRemWithout);
+    line-height: 1.2;
+    // padding-bottom: rem(21);
+    padding-bottom: proadrem(15, 21, $minWidthRemWithout, $maxWidthRemWithout);
+    flex-grow: 1;
+    &._blue {
+      color: #7cafdd;
+    }
+    &._beige {
+      color: #e79751;
+    }
+    &._orange-red {
+      color: #fa5240;
+    }
+    &._green {
+      color: var(--green-color);
+    }
+  }
+
+  // .faq__item-content
+
+  &__item-content {
+    // min-height: rem(148);
+    min-height: proadrem(90, 148, $minWidthRemWithout, $maxWidthRemWithout);
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .faq__text
+
+  &__text {
+    margin-bottom: rem(7);
+    flex-grow: 1;
+    line-height: 1.2;
+  }
+
+  // .faq__link
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+    &._blue {
+      color: #7cafdd;
+    }
+    &._beige {
+      color: #e79751;
+    }
+    &._orange-red {
+      color: #fa5240;
+    }
+    &._green {
+      color: var(--green-color);
+    }
+    transition: opacity 0.3s ease;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        text-decoration-line: underline;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  // .faq__arrow
+
+  &__arrow {
+  }
+}

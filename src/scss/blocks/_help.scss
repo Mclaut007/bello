@@ -84,10 +84,12 @@
   &__img-text {
     font-weight: 300;
     // font-size: rem(22);
-    font-size: proadrem(16, 22, $minWidthRemWithout, $maxWidthRemWithout);
+    // font-size: proadrem(16, 22, $minWidthRemWithout, $maxWidthRemWithout);
+    font-size: proadrem(14, 17, $minWidthRemWithout, $maxWidthRemWithout);
     line-height: 1.2;
     color: var(--black-color);
-    padding: rem(20) rem(25);
+    // padding: rem(20) rem(25);
+    padding: rem(11) rem(18);
     border-radius: rem(5);
     width: fit-content;
     // min-height: rem(67);

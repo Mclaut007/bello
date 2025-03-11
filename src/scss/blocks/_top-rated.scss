@@ -6,7 +6,7 @@
   // .top-rated__container
 
   &__container {
-    padding: rem(90) rem(15) rem(85);
+    padding: rem(90) rem(15) rem(95);
     position: relative;
   }
 
@@ -154,5 +154,13 @@
   // .top-rated-card__text-link
 
   &__text-link {
+    color: var(--black-color);
+    text-decoration: underline;
+    transition: opacity 0.3s ease;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
 }

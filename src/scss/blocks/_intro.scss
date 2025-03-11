@@ -4,8 +4,8 @@
   &__container {
     max-width: rem(1398);
     // padding: rem(156) rem(15) rem(340);
-    padding: proadrem(140, 156, $minWidthRemWithout, $maxWidthRemWithout) rem(15)
-      proadrem(230, 340, $minWidthRemWithout, $maxWidthRemWithout);
+    padding: proadrem(125, 183, $minWidthRemWithout, $maxWidthRemWithout) rem(15)
+      proadrem(230, 342, $minWidthRemWithout, $maxWidthRemWithout);
     position: relative;
   }
 
@@ -33,11 +33,11 @@
     font-weight: 600;
     // font-size: rem(64);
     font-size: proadrem(40, 64, $minWidthRemWithout, $maxWidthRemWithout);
-    line-height: 1;
+    line-height: 1.07;
     text-transform: capitalize;
     color: var(--black-color);
     // margin-bottom: rem(26);
-    margin-bottom: proadrem(15, 26, $minWidthRemWithout, $maxWidthRemWithout);
+    margin-bottom: proadrem(15, 25, $minWidthRemWithout, $maxWidthRemWithout);
   }
 
   // .intro__text
@@ -67,8 +67,8 @@
     position: absolute;
     // top: 0;
     // bottom: rem(175);
-    bottom: proadrem(25, 175, $mobileSmallRemWithout, $maxWidthRemWithout);
-    right: rem(13);
+    bottom: proadrem(25, 205, $mobileSmallRemWithout, $maxWidthRemWithout);
+    right: rem(43);
     width: 70%;
     @media (max-width: $mobileMiddle) {
       width: 80%;

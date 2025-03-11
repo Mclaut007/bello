@@ -5,7 +5,7 @@
 
   &__container {
     // padding: rem(85) rem(15);
-    padding: proadrem(55, 85, $minWidthRemWithout, $maxWidthRemWithout) rem(15) proadrem(20, 85, $minWidthRemWithout, $maxWidthRemWithout) ;
+    padding: proadrem(55, 80, $minWidthRemWithout, $maxWidthRemWithout) rem(15) proadrem(20, 85, $minWidthRemWithout, $maxWidthRemWithout) ;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,7 +31,7 @@
   &__img-wrapper {
     box-shadow: 0 rem(2) rem(40) 0 rgba(0, 0, 0, 0.04);
     // margin-bottom: rem(20);
-    margin-bottom: proadrem(10, 20, $minWidthRemWithout, $maxWidthRemWithout);
+    margin-bottom: proadrem(10, 15, $minWidthRemWithout, $maxWidthRemWithout);
   }
 
   // .affordable__img
